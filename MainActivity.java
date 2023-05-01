@@ -1,4 +1,5 @@
 package com.example.gallaryapp;
+
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
@@ -15,6 +16,7 @@ import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
 import java.io.InputStream;
+
 public class MainActivity extends AppCompatActivity
 {
  private static final int REQUEST_CODE_STORAGE_PERMISSION = 1;
@@ -28,7 +30,7 @@ public class MainActivity extends AppCompatActivity
  findViewById(R.id.buttonSelectedImage).setOnClickListener(new View.OnClickListener() {
  @Override
  public void onClick(View view) {
-S Trisheela
+
  if (ContextCompat.checkSelfPermission(
  getApplicationContext(), Manifest.permission.READ_EXTERNAL_STORAGE
  ) != PackageManager.PERMISSION_GRANTED) {
@@ -74,7 +76,7 @@ permissions,@Nullable int[] grantResults)
  if(data != null){
  Uri selectedImageUri = data.getData();
  if(selectedImageUri != null){
-S Trisheela
+
  try{
  InputStream inputStream = getContentResolver().openInputStream(selectedImageUri);
  Bitmap bitmap = BitmapFactory.decodeStream(inputStream);
