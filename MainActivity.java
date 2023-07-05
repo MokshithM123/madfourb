@@ -113,3 +113,6 @@ permissions,@Nullable int[] grantResults)
  }
  }
 }
+
+AndroidManifest.xml
+<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
